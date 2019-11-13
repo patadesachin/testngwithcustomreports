@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" thread-count="4" parallel="tests" name="Failed suite [Smoke Test Suite]" verbose="0">
+  <parameter name="os" value="windows"/>
+  <parameter name="os_version" value="7"/>
+  <parameter name="browser" value="firefox"/>
+  <parameter name="browser_version" value="32.0"/>
+  <parameter name="expected_text" value="Hello There!"/>
+  <listeners>
+    <listener class-name="samplereporter.HTMLReporter"/>
+    <listener class-name="utils.BaseTest"/>
+  </listeners>
+  <test parallel="tests" name="Sample Test Class Windows7 Firefox 32.0(failed)">
+    <parameter name="os" value="windows"/>
+    <parameter name="os_version" value="7"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="browser_version" value="32.0"/>
+    <parameter name="expected_text" value="Hello There!"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="uitests.smoke.SampleTestClass">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testMethod" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- uitests.smoke.SampleTestClass -->
+    </classes>
+  </test> <!-- Sample Test Class Windows7 Firefox 32.0(failed) -->
+</suite> <!-- Failed suite [Smoke Test Suite] -->

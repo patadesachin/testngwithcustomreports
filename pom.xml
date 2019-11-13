@@ -17,9 +17,9 @@
 
 	<profiles>
 		<profile>
-			<id>Smoke-All-Windows7-Firefox</id>
+			<id>TestNG_withCentralizedReport</id>
 			<properties>
-				<testng.xml.file>testng/TestNG_Smoke_Firefox.xml</testng.xml.file>
+				<testng.xml.file>testng/TestNG_CentralReport.xml</testng.xml.file>
 			</properties>
 		</profile>
 	</profiles>
@@ -137,6 +137,7 @@
 				<version>2.17</version>
 				<configuration>
 					<suiteXmlFiles>
+						<!--suppress UnresolvedMavenProperty -->
 						<suiteXmlFile>${testng.xml.file}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
