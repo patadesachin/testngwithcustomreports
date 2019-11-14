@@ -34,7 +34,7 @@ public class BaseTest extends TestListenerAdapter
         System.setProperty("browser_version", browser_version);
         System.getProperty("user.dir");
         System.out.println("\n\n\n\n brpwser link"+  System.getProperty("user.dir"));
-        System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir")+"/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir")+"/chromedriver_linux");
   //      ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
     	ChromeOptions chromeOptions = new ChromeOptions();
     	chromeOptions.addArguments("--headless");
