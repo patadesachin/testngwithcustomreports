@@ -4,7 +4,7 @@ pipeline {
         maven 'maven3.6' 
         jdk 'jdk8'
     }
-	parameter {
+	parameters {
 		choice(name:'Report_Selection',
 			choices:'centralized_report\nExtent_Report\nTestNGReport',
 			description:'which reports need to use?')
