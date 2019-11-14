@@ -6,7 +6,7 @@ pipeline {
     }
 	parameters {
 		choice(name:'Report_Selection',
-			choices:'centralized_report\nExtent_Report\nTestNGReport',
+			choices:'TestNG_withCentralizedReport\nExtent_Report\nTestNGReport',
 			description:'which reports need to use?')
 		choice(name:'TestType_Selection',
 			choices:'Smoke\nRegression',
