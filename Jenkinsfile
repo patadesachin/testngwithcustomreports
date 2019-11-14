@@ -11,7 +11,8 @@ pipeline {
 		choice(name:'TestType_Selection',
 			choices:'Smoke\nRegression',
 			description:'which test execution smoke or regression?')
-    }
+			}
+
     stages {
 		stage('Smoke Test with Centralized Report') {
             steps{
@@ -19,7 +20,6 @@ pipeline {
             }
         }
 
-    stages {
 		stage('Functional Tests with Centralized Report') {
             steps{
                 sh 'mvn clean test -P${params.Report_Selection} -Dgroups=${params.TestType_Selection}'
