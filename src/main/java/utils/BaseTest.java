@@ -35,7 +35,7 @@ public class BaseTest extends TestListenerAdapter
         System.getProperty("user.dir");
 
         System.out.println("\n\n\n\n brpwser link"+  System.getProperty("user.dir"));
-        /*
+
         System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir")+"/chromedriver_linux");
   //      ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
     	ChromeOptions chromeOptions = new ChromeOptions();
@@ -45,7 +45,7 @@ public class BaseTest extends TestListenerAdapter
 //        driver = new FirefoxDriver();
         driver.get(PropertyUtils.getProperty("app.url"));
 
-        new WebDriverWait(driver, 25).until(ExpectedConditions.titleContains("Google"));*/
+        new WebDriverWait(driver, 25).until(ExpectedConditions.titleContains("Google"));
     }
 
     @AfterTest(alwaysRun = true)
