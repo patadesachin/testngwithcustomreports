@@ -18,8 +18,7 @@ pipeline {
             steps{
                 echo "Pulling value from ${params.Report_Selection}"
                 echo "Pulling value from ${params.TestType_Selection}"
-
-                sh 'mvn clean test -P"echo ${params.Report_Selection}" -Dgroups="echo ${params.TestType_Selection}"'                         }
+                sh 'mvn clean test -P"echo ${params.Report_Selection}" -Dgroups="echo ${params.TestType_Selection}"'                         
             }
         }
 
