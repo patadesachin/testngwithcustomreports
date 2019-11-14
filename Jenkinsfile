@@ -16,9 +16,9 @@ pipeline {
     stages {
 		stage('Smoke Test with Centralized Report') {
             steps{
-                echo "Pulling value from ${params.Report_Selection}"
-                echo "Pulling value from ${params.TestType_Selection}"
-                sh 'mvn clean test -P'|"echo ${params.Report_Selection}" |"-Dgroups="|"echo ${params.TestType_Selection}"
+                echo "${params.Report_Selection}"
+                echo "${params.TestType_Selection}"
+                sh 'mvn clean test -P${params.Report_Selection} -Dgroups=${params.TestType_Selection}'
             }
         }
 
