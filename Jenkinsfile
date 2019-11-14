@@ -18,7 +18,7 @@ pipeline {
             steps{
                 echo "${params.Report_Selection}"
                 echo "${params.TestType_Selection}"
-                sh 'mvn clean test -P${params.Report_Selection} -Dgroups=${params.TestType_Selection}'
+                sh "mvn clean test -P${params.Report_Selection} -Dgroups=${params.TestType_Selection}"
             }
         }
 
