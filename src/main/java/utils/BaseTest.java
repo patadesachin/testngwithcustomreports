@@ -51,8 +51,8 @@ public class BaseTest extends TestListenerAdapter
     @AfterTest(alwaysRun = true)
     public void tearDown()
     {
-        driver.close();
-        driver.quit();
+//        driver.close();
+  //      driver.quit();
     }
 
     public WebDriver getDriverInstance()
